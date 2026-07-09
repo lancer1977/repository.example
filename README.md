@@ -1,4 +1,27 @@
-# BASIC - How to setup for hosting on GitHub Pages
+# Kodi Repository Example
+
+This repository is a Kodi add-on repository template. It contains a sample `repository.example` add-on, a simple `repo/index.html` landing page, and `_repo_xml_generator.py` for generating Kodi repository metadata and zips.
+
+## Repository Layout
+
+- `repository.example/` - sample Kodi repository add-on metadata and artwork.
+- `_repo_xml_generator.py` - generator for add-on zips, `zips/addons.xml`, and `zips/addons.xml.md5`.
+- `repo/index.html` - simple repository add-on download page for hosting.
+- `scripts/validate.sh` - lightweight validation for the generator and sample `addon.xml`.
+
+## Validation
+
+Run:
+
+```bash
+./scripts/validate.sh
+```
+
+The validator compiles the Python generator and parses the sample Kodi add-on XML. It does not generate or publish zips.
+
+## Setup
+
+### Basic - How to setup for hosting on GitHub Pages
 
 In order to follow this tutorial, first fork this repository, and then clone your newly forked copy locally.
 
@@ -49,7 +72,7 @@ And if you named it something else, it will be:
 
 `https://YOUR_USERNAME_HERE.github.io/REPOSITORY_NAME_HERE/repo/`
 
-# ADVANCED - How to set up for hosting without GitHub Pages
+### Advanced - How to set up for hosting without GitHub Pages
 
 If you want to host your Kodi repo on a different host besides GitHub Pages, simply download this repository as a `.zip`, and unzip it , rather than forking and cloning it. Continue to follow the rest of the setup procedure, except for the setting up of GitHub Pages. The only differences will be in your `addon.xml` file (lines 5-7), as it will need to reference yourhost, rather than GitHub:
 
@@ -64,7 +87,6 @@ And upload the contents of this repository to your host. It is **very important*
 After doing so, your file manager source will be:
 
 `https://YOUR_HOST_URL_HERE/repo/`
-
 
 
 
